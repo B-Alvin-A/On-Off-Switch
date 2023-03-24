@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --on: #26E067;
+    --off: #EE3F5E;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #111729;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.switch {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 60px;
+    cursor: pointer;
+}
+
+.switch::after {
+    background-color: var(--off);
+    position: absolute;
+    content: '';
+    z-index: -10;
+    height: 210px;
+    width: 420px;
+    left: -30px;
+    border-radius: 1000px;
+    box-shadow: 0 0 200px var(--off);
+}
+
+.letter-O {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: .75s ease-in-out;
+    z-index: 10;
+}
+
+.letter-O::before {
+    position: absolute;
+    content: '';
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    transition: .5s ease;
+    background-color: var(--off);
+}
+
+.letter-F {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    transition: .75s ease;
+}
+
+.letter-F .bar {
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.letter-F .bar-1 {
+    height: 135px;
+    transform-origin: 15px 15px;
+    transform: rotateZ(-90deg);
+    z-index: -1;
+}
+
+.letter-F .bar-2 {
+    height: 135px;
+    transform-origin: 15px 15px;
+    transform: rotateZ(-90deg) translateX(-60px);
+}
+
+.letter-F.second .bar {
+    box-shadow: 0 0 25px #EE3F5FDB;
+    background-color: var(--off);
+}
+
+.switch.on::after {
+    background-color: var(--on);
+    box-shadow: 0 0 200px var(--on);
+}
+
+.letter-O.on {
+    transform: translateX(210px);
+}
+
+.letter-O.on::before {
+    background-color: var(--on);
+}
+
+.letter-F.first.on {
+    opacity: 0;
+}
+
+.letter-F.second.on .bar {
+    background-color: var(--on);
+    box-shadow: 0 0 15px #24D161A6;
+}
+
+.letter-F.second.on .bar-1 {
+    height: 195px;
+    transform: rotateZ(-45deg);
+}
+
+.letter-F.second.on .bar-2 {
+    height: 100%;
+    transform-origin: center;
+    transform: rotateZ(-180deg) translateX(-120px);
+}

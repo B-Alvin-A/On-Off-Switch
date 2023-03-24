@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON OFF Switch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="switch">
+        <div class="letter letter-O"></div>
+        <div class="letter letter-F first">
+            <div class="bar bar-1"></div>
+            <div class="bar bar-2"></div>
+            <div class="bar bar-3"></div>
+        </div>
+
+        <div class="letter letter-F second">
+            <div class="bar bar-1"></div>
+            <div class="bar bar-2"></div>
+            <div class="bar bar-3"></div>
+        </div>
+    </div>
+    
+    <script>
+        const switchBtn = document.querySelector(".switch");
+        const letters = document.querySelectorAll(".letter");
+
+        switchBtn.addEventListener('click', () => {
+            switchBtn.classList.toggle('on');
+            letters.forEach((letter) => {
+                letter.classList.toggle('on')
+            })
+        })
+    </script>
+</body>
+</html>
