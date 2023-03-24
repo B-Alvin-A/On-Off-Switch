@@ -1,7 +1,7 @@
 # On-Off-Switch
 An animated on-off switch.
 
-This is an HTML document with embedded CSS and JavaScript. It creates an animated on-off switch consisting of two letters, "O" and "F". The switch can be toggled on and off by clicking on it.
+This is HTML, CSS and JavaScript used to create an animated on-off switch consisting of two letters, "O" and "F". The switch can be toggled on and off by clicking on it.
 
 The HTML code defines a container element with the class "switch" that contains three child elements, each with a class of "letter". The first child element is an "O" letter, and the other two child elements are "F" letters.
 
